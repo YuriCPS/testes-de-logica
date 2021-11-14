@@ -1,7 +1,4 @@
 let x = 10;
-let y = 100;
+let result = Math.abs(x - 10);
 
-let resultado = x - y;
-let resultadoSemprePositivo = Math.abs(resultado);
-
-console.log(resultadoSemprePositivo);
+console.log(result);
