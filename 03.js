@@ -28,16 +28,18 @@ function readLine() {
  * The function is expected to return a STRING.
  * The function accepts INTEGER x as parameter.
  */
-
+// Shared Content to CodeReview
+// Credits : https://github.com/engnogueira
 function count_down(x) {
-  let contagem = "";
-  for (let i = 0; i < x; i += 1) {
-    contagem += x - i + "...";
+  let contagemRegressiva = "";
+  for (i = x; i >= 0; i -= 1) {
+    if (i == 0) {
+      contagemRegressiva += i + "!!!";
+      return contagemRegressiva;
+    }
+    contagemRegressiva += i + "...";
   }
-  contagem += "0!!!";
-  return contagem;
 }
-console.log(count_down(10));
 
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
